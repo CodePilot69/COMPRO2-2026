@@ -1,8 +1,8 @@
-package activity2;
+
 
 import java.util.Scanner;
 
-public class Main1 {
+public class Activity2 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -27,10 +27,13 @@ public class Main1 {
         Scanner input = new Scanner(System.in);
         double sum = 0;
         for (int row = 0; row < m.length; row++) {
-            
+            sum += m[row][columnIndex];
         }
         return sum;
+
+
     }
+
 }
 
 
