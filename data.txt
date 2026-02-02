@@ -1,0 +1,5 @@
+First Name: Ira
+Enter Last name: Palabay
+Enter Age: 18
+Enter Email: Ira@gmail.com
+Enter Phone: 0913566
