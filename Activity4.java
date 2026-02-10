@@ -30,6 +30,8 @@ public class Activity4 {
                 }
             }
             System.out.println();
+            
+            sc.close();
         }
 
         
@@ -51,7 +53,7 @@ public class Activity4 {
             sb.append("\n");
         }
 
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter("data.csv"))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("grades.csv"))) {
             bw.write(sb.toString());
             bw.flush();
         } catch (IOException e) {

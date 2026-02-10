@@ -1,6 +1,4 @@
-Subject,Prelim,Midterm,Final
-COMPRO1,123,123,123
-COMPRO2,213,123,123
-DSA,123,123,123
-MMW,123,123,213
-OOP,123,123,123
+Subject,Prelims,Midterms,Finals,Average
+COMRPO1,90.0,90.0,90.0,90.0
+dwdsa,231.0,123.0,123.0,159.0
+wdwd,123.0,123.0,123.0,123.0
