@@ -31,7 +31,7 @@ public class Activity4 {
             }
             System.out.println();
             
-            sc.close();
+           
         }
 
         
