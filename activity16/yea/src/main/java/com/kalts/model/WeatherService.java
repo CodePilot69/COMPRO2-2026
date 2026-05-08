@@ -1,0 +1,32 @@
+package com.weather.app.services;
+
+import com.google.gson.Gson;
+import com.weather.app.models.WeatherResponse;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class WeatherService {
+    private HttpClient client = HttpClient.newHttpClient();
+    private Gson gson = new Gson();
+
+    public WeatherResponse getForecast(double lat, double lon) {
+        String url = "https://www.7timer.info/bin/astro.php?lon=" + lon + "&lat=" + lat + "&ac=0&unit=metric&output=json";
+        
+        try {
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(url))
+                    .build();
+
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() == 200) {
+                return gson.fromJson(response.body(), WeatherResponse.class);
+            }
+        } catch (Exception e) {
+            System.out.println("Error fetching data: " + e.getMessage());
+        }
+        return null;
+    }
+}
